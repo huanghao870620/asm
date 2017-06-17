@@ -67,6 +67,10 @@ WinMain proc hInst:HINSTANCE, hPrevInst:HINSTANCE, CmdLine:LPSTR, CmdShow:DWORD
  invoke UpdateWindow, hwnd
 
   .WHILE TRUE
+     invoke GetMessage, addr msg, NULL, 0, 0
+     .break .if (!eax)
+     invoke TranslateMessage, addr msg
+     invoke DispatchMessage, addr msg
   .ENDW
   mov eax, msg.wParam
   ret
