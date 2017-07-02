@@ -19,13 +19,12 @@ includelib masm32.lib
 .code
 
 main PROC
-  
-  call a0
+;  call a0
 main endp
 
 a0 proc
-; push ebp
-; mov ebp, esp
+ push ebp
+ mov ebp, esp
 ; sub esp, 0ah
 ;  invoke StdOut, addr szText
 ;  invoke StdOut, eax
