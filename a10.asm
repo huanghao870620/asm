@@ -19,20 +19,21 @@ includelib masm32.lib
 .code
 
 main PROC
-;  call a0
+  LOCAL v1:dword
+  mov eax,4
+  mov eax,5
+  mov eax, offset szText
+  mov v1, eax
+  invoke ExitProcess,0
 main endp
 
 a0 proc
  push ebp
  mov ebp, esp
-; sub esp, 0ah
-;  invoke StdOut, addr szText
-;  invoke StdOut, eax
 a0 endp
 
 a1 proc
 a1 endp
-
 
 
 end main
