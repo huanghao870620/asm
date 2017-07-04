@@ -22,17 +22,17 @@ includelib debug.lib
 
 main PROC
   LOCAL v1:dword
-  mov eax,4
-  mov eax,5
+  
   mov eax, offset szText
-  ;mov v1, eax
   PrintDec v1
 
-  mov ecx,2
-  ;d:
+ mov ebx,3
+ dd3:
   ;invoke StdOut, addr szText
-  ;loop d  
-
+  invoke StdOut, addr szText
+  sub ebx,1
+  cmp ebx,0
+  jnz dd3
 
   invoke ExitProcess,0
 main endp
