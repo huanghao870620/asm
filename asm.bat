@@ -1,5 +1,6 @@
 @echo off
 set path=D:\soft\Masm615;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;%JAVA_HOME%\bin;%MVN_HOME%\bin;D:\soft\Git\bin;D:\soft\Git\usr\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;d:\soft\UltraEdit;D:\soft\CMake\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin;D:\soft\cmake-3.7.0-rc2-win32-x86\bin;D:\soft\odb-2.4.0-i686-windows\bin;C:\Program Files (x86)\Visual Leak Detector\bin\Win32;C:\Program Files (x86)\Visual Leak Detector\bin\Win64;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;D:\soft\node\;D:\masm32\bin
 
-ml %1
-link %1
+ml %1 
+link %1 
+rem masm %1
