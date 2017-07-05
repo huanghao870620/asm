@@ -1,7 +1,7 @@
  assume cs:code, ds:data, ss:stack
  
  data segment
-  file db 'd:\l.txt', 0
+  file db 'd:\1.txt', 0
   buf db 256 dup(0)
   error_message db 0ah, 'error!', '$'
   handle dw ?  
@@ -19,18 +19,29 @@
   mov dx, offset file
   mov al, 0
   mov ah, 3dh
+  
   int 21h
   jc error
   mov handle, ax
   mov bx, ax
+  mov cx, 255
+  mov dx, offset buf
+  mov ah,3fh  
+  int 21h
+  
+  jc error
+  
+  mov bx,ax
   mov buf[bx], '$'
   mov dx, offset buf
   mov ah,9
   int 21h
   mov bx, handle
-  mov ah, 3eh
+  mov ah,3eh
   int 21h
   jnc end1
+  
+  
   
   error:
    mov dx, offset error_message
